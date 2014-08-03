@@ -8,18 +8,23 @@
 以下の問ではxxをするプログラムを書けという形式で問題が出題されることがあるが、
 そこで解答するプログラムは必要最小限で良い。例えば、「画面にHelloと出力するプログラム書け」という問題では、
 
-    using System;
-    class Program
+```C#
+using System;
+class Program
+{
+    static void Main()
     {
-        static void Main()
-        {
-            Console.WriteLine("Hello");
-        }
+        Console.WriteLine("Hello");
     }
+}
+```
+
 
 と書くのはもちろん問題ないが、単に
 
-    Console.WriteLine("Hello");
+```C#
+Console.WriteLine("Hello");
+```
 
 でも良い。要は回答者が理解していることが採点者に分かれば良い。
 
@@ -36,14 +41,16 @@ Q1. **Hello C#**
 
 (3)以下のプログラムの4行目を完全修飾名で書け。  
 
-    using System;
-    class Program
+```C#
+using System;
+class Program
+{
+    static void Main()
     {
-        static void Main()
-        {
-            Console.WriteLine("Hello");
-        }
+        Console.WriteLine("Hello");
     }
+}
+```
 
 (4) Console.WriteLine();をVisualStudio上で書くときは「○○ Tab Tab」と入力するのが便利である。  
 ○○に入るアルファベット2文字を書け。
