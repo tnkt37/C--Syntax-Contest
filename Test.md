@@ -59,7 +59,9 @@ class Program
 
 (6) Console.WriteLineメソッドを以下のように記述した時何と出力されるか答えよ。
 
-    Console.WriteLine("a={0}, b={1}", 10, 0.5);
+```C#
+Console.WriteLine("a={0}, b={1}", 10, 0.5);
+```
 
 (7) ユーザーから一行の入力を受け取るConsoleクラスのメソッドの名前をかけ。
 
@@ -86,44 +88,52 @@ Q2. **変数とデータ型**
 
 (9) 以下のプログラムの変数宣言の型を指定している部分はあるアルファベット3文字のキーワードに置き換えることが出来る。そのキーワードを答えよ。
 
-    int num = 100;
-    string str = "hello";
-    Random random = new Random();
+```C#
+int num = 100;
+string str = "hello";
+Random random = new Random();
+```
 
 (10) 以下のプログラムがコンパイルエラーにならないように3.14をint型にキャストするプログラムを書け。
-
-    int num = 2.5;
+```C#
+int num = 2.5;
+```
 
 (11) (10)のプログラムを書き換えた時、numには結果的に何が代入されるか。数値で答えよ。
 
 (12) 以下のプログラムの出力結果を答えよ。
-
-    Console.WriteLine('F' - 'C');
+```C#
+Console.WriteLine('F' - 'C');
+```
 
 (13) 以下のプログラムでエラーになる行をコメントに記述している番号で全て選べ。
-
-    class Program
+```C#
+class Program
+{
+    static void Main()
     {
-        static void Main()
+        int a = 10; //①
+        if(a >= 10)
         {
-            int a = 10; //①
-            if(a >= 10)
+            b = b / 3; //②
+            int b = a * a; //③
+            if(b < 1000)
             {
-                b = b / 3; //②
-                int b = a * a; //③
-                if(b < 1000)
-                {
-                    int c = b + a; //④
-                }
-                int d = c * 2; //⑤
+                int c = b + a; //④
             }
-            Console.WriteLine(a + b); //⑥
+            int d = c * 2; //⑤
         }
+        Console.WriteLine(a + b); //⑥
     }
+}
+```
 
-(14) Console.WriteLine(3333333333333333333 * 1000);とし画面に表示させたところ、-5527344008095509496と本来の計算結果とは明らかに異なる値が表示された。
+(14) 以下のプログラムを実行し計算結果を画面に表示させたところ、-5527344008095509496と本来の計算結果とは明らかに異なる値が表示された。
 このように値が大きすぎて計算結果がおかしくなることをなんというか。カタカナで答えよ。
 (実際にはこのプログラムはuncheckedブロック内でないとビルドに失敗するが、今回は気にしなくて良い。)
+```C#
+Console.WriteLine(3333333333333333333 * 1000);
+```
 
 
 Q3. **式と演算子**
@@ -134,10 +144,11 @@ Q3. **式と演算子**
 (2) 数値型の変数から1を引く演算子を記号で答えよ。
 
 (3) 以下のプログラムは画面にどのような値を出力するか。数値で答えよ。
-
-    int a = 25;
-    a += 5;
-    Console.WriteLine(a);
+```C#
+int a = 25;
+a += 5;
+Console.WriteLine(a);
+```
 
 
 以下の(4), (5), (6)では二つのint型の変数a, b, c, dがあるとする。例題と同じ形式で問いに答えよ。
@@ -151,12 +162,14 @@ Q3. **式と演算子**
 (6) aとbが等しい且つcがd未満かどうかを表す比較演算の式を答えよ。
 
 (7) 以下の比較演算の式はtrueになるかfalseになるか。どちらかで答えよ。
-
-    !((true && (true && false)) || (true || false))
+```C#
+!((true && (true && false)) || (true || false))
+```
 
 (8) 以下のプログラムの出力結果を数値で答えよ。
-
-    Console.WriteLine((((1 << 3) - 1) & 14) | 16);
+```C#
+Console.WriteLine((((1 << 3) - 1) & 14) | 16);
+```
 
 
 Q4. **制御文**
@@ -169,13 +182,14 @@ Q4. **制御文**
 (2) for文を使って無限ループになるプログラムを書け。
 
 (3) 以下のwhileループとおおよそ同じ動作をするforループを書け。
-
-    int i = 0;
-    while (i < 10)
-    {
-        Console.WriteLine(i);
-        i++;
-    }
+```C#
+int i = 0;
+while (i < 10)
+{
+    Console.WriteLine(i);
+    i++;
+}
+```
 
 (4) whileまたはforのループの中から途中で抜けるために使用する「b」から始まるアルファベット5文字のキーワードを書け。
 
@@ -233,16 +247,17 @@ Q6. **クラスとメソッド**
 (11) Charaという名前のクラスがあるとする。このクラスのコンストラクタを書け。
 
 (12) 以下Charaクラスを継承したEnemyクラスを作成し、Walkメソッドをオーバーライドして x -= steps; とするプログラムを書け。
-
-    class Chara
+```C#
+class Chara
+{
+    public int x = 0;
+    
+    public virtual void Walk(int steps)
     {
-        public int x = 0;
-        
-        public virtual void Walk(int steps)
-        {
-            x += steps;
-        }
+        x += steps;
     }
+}
+```
 
 
 Q7. **インターフェイス**
@@ -261,7 +276,7 @@ Q9. **デリゲートとイベント**
 ---
 
 以下の様にデリゲートとイベントが定義されているとする。
-
+```C#
 delegate int NumHandler(int a, int b);
 NumHandler sumHandler;
 event NumHanlder SumEvent;
@@ -270,6 +285,7 @@ int Sum(int a, int b)
 {
     return a + b;
 }
+```
 
 (1) SumEventにSumメソッドを追加するプログラムを書け。
 
@@ -281,27 +297,30 @@ Q10. **例外**
 
 (1) 以下のプログラムを実行し、数値以外の文字列を標準入力に入力したところ、FormatExceptionが発生しプログラムが異常終了した。
 例外処理を用いてint.Parseに失敗した場合は「失敗」と出力し、プログラムが異常終了しないように書き直せ。
-
-    string input = Console.ReadLine();
-    int num = int.Parse(input) + 10;
+```C#
+string input = Console.ReadLine();
+int num = int.Parse(input) + 10;
+```
 
 (2) 以下のメソッドの冒頭に1行～数行加え、引数がnullだった場合はArugumentNullExceptionを発生させるようにせよ。
-
-    int Sum(int[] arr)
-    {
-        //ここに書き加えるプログラムを書く
-        return arr.Sum();
-    }
+```C#
+int Sum(int[] arr)
+{
+    //ここに書き加えるプログラムを書く
+    return arr.Sum();
+}
+```
 
 
 Q11. **ジェネリック**
 ---
 
 (1) ジェネリックを用いて以下のように使用できるPairクラスを作成せよ。
-
-    Pair<int, string> pair = new Pair<int, string>();
-    pair.First = 10;
-    pair.Second = "hello";
+```C#
+Pair<int, string> pair = new Pair<int, string>();
+pair.First = 10;
+pair.Second = "hello";
+```
 
 (2) (1)で作成したクラスの型パラメータにはIDisposableインターフェイスを実装していなければ渡すことが出来ないという制約を設けたい。
 class宣言の必要なところを書き換えよ。
@@ -327,16 +346,17 @@ Q13. **Windowsフォーム・ゲームプログラミング・その他**
 (5) WindowsFormのイベントで、キーが押された時に発生するイベントを一つ答えよ。
 
 (6) 二つのオブジェクト(キャラクター)の当たり判定を行うHitメソッドを作りたい。コメントの仕様に沿ってメソッドの中身を書け。
-
-    // p1: 一つめのオブジェクトの座標
-    // s1: 一つめのオブジェクトの大きさ
-    // p2: 二つめのオブジェクトの座標
-    // p3: 二つめのオブジェクトの大きさ
-    // 返り値: 当たった時は ture 当たっていない時は falseを返す。
-    bool Hit(Point p1, Size s1, Point p2, Size s2)
-    {
-        //ここの中身を書く
-    }
+```C#
+// p1: 一つめのオブジェクトの座標
+// s1: 一つめのオブジェクトの大きさ
+// p2: 二つめのオブジェクトの座標
+// p3: 二つめのオブジェクトの大きさ
+// 返り値: 当たった時は ture 当たっていない時は falseを返す。
+bool Hit(Point p1, Size s1, Point p2, Size s2)
+{
+    //ここの中身を書く
+}
+```
 
 (7) Listクラスと配列の違いを一つ挙げよ。(「違うクラスである」のような解答は禁止)
 
