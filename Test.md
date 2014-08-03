@@ -112,18 +112,18 @@ class Program
 {
     static void Main()
     {
-        int a = 10; //①
+        int a = 10; // 1
         if(a >= 10)
         {
-            b = b / 3; //②
-            int b = a * a; //③
+            b = b / 3; // 2
+            int b = a * a; // 3
             if(b < 1000)
             {
-                int c = b + a; //④
+                int c = b + a; // 4
             }
-            int d = c * 2; //⑤
+            int d = c * 2; // 5
         }
-        Console.WriteLine(a + b); //⑥
+        Console.WriteLine(a + b); // 6
     }
 }
 ```
