@@ -1,0 +1,322 @@
+﻿C# Syntax Contest 解答用紙
+
+解答欄では好きな様に改行して良い。
+ただし無意味に採点者の採点を行いにくくする書き方はしないこと。
+
+学年: 高2
+名前: 齋藤主裕
+
+Q1
+(1)
+.NET Framework
+
+(2)
+コンパイル
+
+(3)
+System.Console.WriteLine("Hello");
+
+(4)
+cw
+
+(5)
+Console.Write
+
+(6)
+a=10, b=0.5
+
+(7)
+Console.ReadLine();
+
+
+----------------------------------------
+Q2
+(1)
+int num = 10;
+
+(2)
+32
+
+(3)
+byte short int long
+
+(4)
+uint
+
+(5)
+float, double
+
+(6)
+0.08f
+
+(7)
+'A'
+
+(8)
+true, false
+
+(9)
+var
+
+(10)
+int num = (int)2.5;
+
+(11)
+2
+
+(12)
+3
+
+(13)
+2, 5, 6
+
+(14)
+オーバーフロー
+
+
+----------------------------------------
+Q3
+(1)
+%
+
+(2)
+--
+
+(3)
+30
+
+(4)
+a <= b
+
+(5)
+a != b
+
+(6)
+a == b && c < d
+
+(7)
+false
+
+(8)
+22
+
+
+----------------------------------------
+Q4
+(1)
+if(a == b) Console.WriteLine("おはよう");
+else if(a >= b) Console.WriteLine("こんにちは");
+else Console.WriteLine("こんばんは");
+
+(2)
+for(;;){}
+
+(3)
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+(4)
+break;
+
+(5)
+continue;
+
+
+----------------------------------------
+Q5
+(1)
+int[] arr = new int[10];
+
+(2)
+arr.Length
+
+(3)
+int[,] arr = new int[5, 10];
+
+(4)
+arr.GetLength(1)
+
+(5)
+0
+
+(6)
+for (int i = 0; i < arr.Length; i++)
+    arr[i] *= 10;
+
+(7)
+foreach(int num in arr)
+{
+    Console.WriteLine(num);
+}
+
+(8)
+Array.Sort
+
+(9)
+int[] arr = { 0, 1, 2, 3, 4 };
+
+
+----------------------------------------
+Q6
+(1)
+return
+
+(2)
+int Add10(int num)
+{
+    return num + 10;
+}
+
+(3)
+void Add10(int num)
+{
+    Console.WriteLine(num + 10);
+}
+
+(4)
+int fact(int a)
+{
+    if(a == 1) return 1;
+    return fact(a - 1) * a;
+}
+
+(5)
+int Nagate(int num)
+{
+    return -num;
+}
+double Nagate(int num)
+{
+    return -num;
+}
+
+(6)
+class Chara
+{
+    static int speed;
+}
+
+(7)
+public
+
+(8)
+private
+
+(9)
+int count;
+int Count
+{
+    get { return count; }
+    set
+    {
+        if(value >= 0)
+            count = value;
+    }
+}
+
+(10)
+public int Score{ get; private set; }
+
+(11)
+public Chara()
+{
+    
+}
+
+(12)
+class Enemy : Chara
+{
+    public override void Walk(int steps)
+    {
+        x -= steps;
+    }
+}
+
+
+----------------------------------------
+Q7
+interface IWalkable
+{
+    int Walk();
+}
+
+
+----------------------------------------
+Q8
+クラスは参照型で、構造体は値型。
+
+
+----------------------------------------
+Q9
+(1)
+SumEvent += Sum;
+
+(2)
+sumHandler = (a, b) => a + b;
+
+
+----------------------------------------
+Q10
+(1)
+string input = Console.ReadLine();
+try
+{
+    int num = int.Parse(input) + 10;
+}
+catch(FormatException)
+{
+    Console.WriteLine("失敗");
+}
+
+(2)
+if(arr == null)
+    throw new ArugumentNullException();
+
+
+----------------------------------------
+Q11
+(1)
+class Pair<T, U>
+{
+    public T First { get; set; }
+    public U Second { get; set; }
+}
+
+(2)
+class Pair<T, U> where T : IDisposable
+
+
+----------------------------------------
+Q12
+namespace
+
+
+Q13
+(1)
+MessageBox.Show("Hello");
+
+(2)
+Load
+
+(3)
+Bitmap
+
+(4)
+PictureBox
+
+(5)
+KeyDown
+
+(6)
+return (p1.X < p2.X + s2.Width) &&
+    (p2.X < p1.X + s1.Width) &&
+    (p1.Y < p2.Y + s2.Height) &&
+    (p2.Y < p1.Y + s1.Height);
+
+(7)
+Listクラスは要素を追加、削除することが出来る。配列は出来ない。
+
+
+fin.
